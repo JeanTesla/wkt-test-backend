@@ -52,7 +52,8 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 this.sendResponseToClient(response, "O Token Expirou!");
             }
         }else{
-            if(!Objects.equals(request.getRequestURI(), "/api/authenticate")){
+            if(!Objects.equals(request.getRequestURI(), "/api/authenticate")
+                    && !Objects.equals(request.getRequestURI(), "/api/candidates")){
                 this.sendResponseToClient(response, "Token Obrigatório!");
             }
         }

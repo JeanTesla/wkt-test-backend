@@ -35,7 +35,7 @@ public class CandidatesController {
     @Autowired
     CandidatesDonorsPerBloodTypeGetService candidatesDonorsPerBloodTypeGetService;
 
-    @PostMapping(value = "/", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "", consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(value = HttpStatus.CREATED)
     public void saveCandidates(@Valid @RequestBody List<CandidatesRequestDTO> candidatesRequestDTOList) {
         candidatesSaveService.execute(candidatesRequestDTOList);
